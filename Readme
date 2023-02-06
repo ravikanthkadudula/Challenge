@@ -1,6 +1,6 @@
-Terraform Code to create 3 tier architecture for Azure.
+Terraform Code to create 3 tier architecture in Azure.
 
-This code is build with modules in terraform and different kinds of file structures such as main.tf, variables.tf and few modules like
+This code is built with modules in terraform and different kinds of file structures such as main.tf, variables.tf and few modules like
 App 
 Web
 Database
