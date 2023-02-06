@@ -1,0 +1,20 @@
+Terraform Code to create 3 tier architecture for Azure.
+
+This code is build with modules in terraform and different kinds of file structures such as main.tf, variables.tf and few modules like
+App 
+Web
+Database
+Network
+ResourceGroup
+
+The main.tf file is the entry point for terraform init, plan and apply.
+
+This architecture consists of a resource group, where all the resources are built inside it. It mainly consits of a Vnet where resources inside which can 
+communicate with each other by deafult via private IP. We have designed a 3 different subnets inside the Vnet and each Subnet is governed by diffrent Rules
+via the NSG. each subnet consists of Vm's here as availability sets. We have 3 different servers inside each Subnet which are Web Server, App Server and
+a Database server. 
+
+Outside the VPN is the internet and we are allowing all incoming traffic to the Webserver only which in tern communicates to App server and then to Database server.
+To fullfil these terms NSG are used.
+
+Please find attached a small Architecture Diagram for the same.
